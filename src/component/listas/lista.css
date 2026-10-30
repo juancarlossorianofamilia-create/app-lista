@@ -23,3 +23,15 @@
     background-color: var(--rojo-transparente);
     border-radius: var(--spacing-medium);
 }
+
+.sumar {
+    padding: 10px;
+    background-color: var(--verde-transparente);
+    border-radius: var(--spacing-medium);
+}
+
+.normal {
+    padding: 10px;
+    background-color: var(--morado-transparente);
+    border-radius: var(--spacing-medium);
+}
