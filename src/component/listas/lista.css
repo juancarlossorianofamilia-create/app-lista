@@ -1,0 +1,25 @@
+.item-historial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    background: var(--cian-transparente);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    
+}
+
+.contenedor-descripcion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+.restar {
+    padding: 10px;
+    background-color: var(--rojo-transparente);
+    border-radius: var(--spacing-medium);
+}

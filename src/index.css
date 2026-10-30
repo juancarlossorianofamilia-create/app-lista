@@ -1,0 +1,19 @@
+
+@import "./styles/tokens.css";
+@import "./styles/layout.css";
+@import "./component/card/card.css";
+@import "./component/header/header.css";
+@import "./component/contador/contador.css";
+@import "./component/cmdButton/cmdButton.css";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  var(--font-family);
+  background-color: var(--color-background-light);
+}

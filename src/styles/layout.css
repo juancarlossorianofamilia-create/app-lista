@@ -1,0 +1,79 @@
+
+/* Layout principal de TeamBoard */
+.App2 {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Menú lateral */
+.App2 > .asides {
+  flex: 0 0 250px;
+    
+}
+
+/* Área de contenido */
+.contenido-principal {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 24px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Las secciones de contenido */
+.seccion {
+  margin-top: 32px;
+}
+
+
+/* Título de la sección */
+.seccion h2 {
+  margin-bottom: 20px;
+}
+
+/* Cuadrícula centrada dentro del área de trabajo */
+.contenedor-tarjetas {
+  justify-content: center;
+}
+
+
+/* Tarjetas del equipo */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 20px;
+  padding: 20px 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+
+/* Adaptación para teléfonos */
+@media (max-width: 600px) {
+  .App2 {
+    flex-direction: column;
+  }
+
+  .App2 > .asides {
+    flex: none;
+    width: 100%;
+    min-height: auto;
+    box-sizing: border-box;
+  }
+
+  .contenido-principal {
+    flex: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contenedor-tarjetas {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+}
