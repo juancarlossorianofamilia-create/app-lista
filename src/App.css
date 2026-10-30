@@ -184,19 +184,10 @@
 }
 
 
-/* Layout principal de TeamBoard */
 /*.App2 {
   display: flex;
-  align-items: stretch;
-  width: 100%;
   min-height: 100vh;
-  box-sizing: border-box;
 }*/
-
-.App2 {
-  display: flex;
-  min-height: 100vh;
-}
 
 .contenido-principal {
   flex: 1;
@@ -222,22 +213,22 @@
 
 }
 
-.contenedor-tarjetas {
+/*.contenedor-tarjetas {
   display: grid;
   padding: 25px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 20px;
-}
+}*/
 
 /* El contenido debe poder reducirse sin desbordarse */
-.App2 > .p-header,
+/*.App2 > .p-header,
 .App2 > header {
   flex: 1 1 0;
   min-width: 0;
-}
+}*/
 
 /* Adaptación para teléfonos */
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .App2 {
     flex-direction: column;
     min-height: 100vh;
@@ -256,5 +247,5 @@
     min-height: 0;
     box-sizing: border-box;
   }
-}
+}*/
 

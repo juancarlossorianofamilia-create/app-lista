@@ -1,38 +1,55 @@
+
 .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   background: white;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 20px;
+  padding: 16px;
   margin: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   gap: 5px;
 }
 
 .avatar {
-  width: 150px;
-  border-radius: 100%;
+  width: 110px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
   margin-bottom: 8px;
 }
 
 .card-content {
+  width: 100%;
+  min-width: 0;
   text-align: center;
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 12px;
 }
 
 .card-description {
   font-size: 14px;
+  line-height: 1.5;
   color: #666;
+  overflow-wrap: anywhere;
 }
+
 .boton {
-  margin-top: 20px;
+  margin-top: 14px;
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 5px 0 10px;
 }

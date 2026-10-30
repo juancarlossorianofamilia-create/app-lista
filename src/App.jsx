@@ -3,8 +3,9 @@
 //import reactLogo from './assets/react.svg'
 //import viteLogo from './assets/vite.svg'
 //import { useState, useEffect } from 'react'
-import './App.css'
 import '../src/styles/layout.css'
+import './App.css'
+
 import Card from './component/card/card.jsx'
 import Header from './component/header/header.jsx'
 import Aside from './component/aside/aside.jsx'   
@@ -86,7 +87,7 @@ function App() {
   const cantidad = datosTarjetas.length
 
   return (  
-    <>
+   
     <section className="App2">
       
       <Aside opciones={opciones} />
@@ -95,12 +96,16 @@ function App() {
         
         <Header />
 
-        <Welcome
+        <section id="home">
+
+         <Welcome
           icon="👋"
           titulo="¡Bienvenido al TeamBoard!"
           parafo="Aquí tienes un resumen de las actividades aprendidas en clases."
           srcImagen="/Designer.png"
-        />
+          />
+          
+        </section>
 
         <section id="about" className="seccion">
 
@@ -129,7 +134,7 @@ function App() {
   </section>
       
         
-    </>
+   
   )
 }
 

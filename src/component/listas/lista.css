@@ -1,37 +1,100 @@
+
+/* ========================================
+   REGISTRO DEL HISTORIAL
+======================================== */
+
 .item-historial {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 16px;
+    gap: 12px;
+
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 16px;
+
     background: var(--cian-transparente);
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 10px;
-    
+    border-radius: 14px;
+
+    box-sizing: border-box;
 }
+
+/* ========================================
+   CONTENEDOR DE DATOS
+======================================== */
+
+.contenedor-datos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+/* ========================================
+   DESCRIPCIÓN Y HORA
+======================================== */
 
 .contenedor-descripcion {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-    
+    flex-wrap: wrap;
+    gap: 12px;
+    min-width: 0;
 }
 
+/* ========================================
+   OPERACIÓN: RESTAR
+======================================== */
+
 .restar {
-    padding: 10px;
+    padding: 6px 10px;
+    margin: 0;
+
     background-color: var(--rojo-transparente);
     border-radius: var(--spacing-medium);
 }
 
+/* ========================================
+   OPERACIÓN: SUMAR
+======================================== */
+
 .sumar {
-    padding: 10px;
+    padding: 6px 10px;
+    margin: 0;
+
     background-color: var(--verde-transparente);
     border-radius: var(--spacing-medium);
 }
 
+/* ========================================
+   OPERACIÓN: NORMAL
+======================================== */
+
 .normal {
-    padding: 10px;
+    padding: 6px 10px;
+    margin: 0;
+
     background-color: var(--morado-transparente);
     border-radius: var(--spacing-medium);
+}
+
+/* ========================================
+   PANTALLAS PEQUEÑAS
+======================================== */
+
+@media (max-width: 600px) {
+
+    .item-historial {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .contenedor-datos {
+        gap: 8px;
+    }
+
+    .contenedor-descripcion {
+        gap: 6px;
+    }
+
 }
