@@ -1,0 +1,25 @@
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 15px 20px;
+  background-color: #081326;
+}
+
+.nav-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #1e293b;
+}
+
+.nav-link.activo {
+  color: white;
+  background-color: #2563eb;
+  font-weight: 600;
+}

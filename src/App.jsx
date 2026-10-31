@@ -11,6 +11,10 @@ import Header from './component/header/header.jsx'
 import Aside from './component/aside/aside.jsx'   
 import Welcome from './component/welcome/welcome.jsx'
 import Contador from './component/contador/contador.jsx'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage.jsx'
+import ContactsPage from './pages/contactsPage.jsx'
+import Navbar from './component/layout/Navbar.jsx'
 
 
 const opciones = [
@@ -84,57 +88,39 @@ const datosTarjetas = [
 
 function App() {
  
-  const cantidad = datosTarjetas.length
+  //const cantidad = datosTarjetas.length
 
-  return (  
-   
-    <section className="App2">
+  return ( 
+    <> 
+      <Navbar/>
       
-      <Aside opciones={opciones} />
-
-      <main className="contenido-principal">
+      <Routes>
         
-        <Header />
+          <Route
+            
+            path="/"
+            element={<HomePage/>}
 
-        <section id="home">
-
-         <Welcome
-          icon="👋"
-          titulo="¡Bienvenido al TeamBoard!"
-          parafo="Aquí tienes un resumen de las actividades aprendidas en clases."
-          srcImagen="/Designer.png"
           />
-          
-        </section>
 
-        <section id="about" className="seccion">
+            <Route
+            
+            path="/contacts"
+            element={<ContactsPage/>}
 
-          <div className='tareas'>
+          />
 
-            <h2>Tarea: Uso de Componentes y Props</h2>
-            <p className='cantidad'>Cantidad de tarjetas: {cantidad}</p>
+          <Route
+            
+            path="*"
+            element={<h1>Pagina no aparece</h1>}
 
-          </div>
-          
+          />
 
-          <div className="contenedor-tarjetas">
-            {datosTarjetas.map((e) => (<Card key={e.id} avatar={e.avatar} nombre={e.nombre} title={e.title} description={e.description} nombreBoton={e.nombreBoton} colorFondo={e.colorFondo} colorText={e.colorText} enlace={e.enlace} />))}
-          </div>
-        </section>
+      </Routes>
 
-        <section id="activities" className="seccion">
-          <h2>Actividades recientes</h2>
-          <Contador/>
+   </>
 
-          {/* Aquí pondrás el componente de listado */}
-        </section>
-
-      </main>
-      
-  </section>
-      
-        
-   
   )
 }
 
