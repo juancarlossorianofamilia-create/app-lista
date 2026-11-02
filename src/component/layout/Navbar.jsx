@@ -20,6 +20,14 @@ function Navbar() {
             >
                 Contactos
             </NavLink>
+
+            <NavLink to="/contacts/new"
+                     className={({isActive})=>
+                    isActive ? "nav-link activo" : "nav-link"}
+            
+            >
+                Nuevo Contacto
+            </NavLink>
         </nav>
     )
 }
